@@ -1,0 +1,142 @@
+#wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signin-container {
+  width: 60vw;
+  height: 85vh;
+
+  box-shadow: 3px 3px 8px 3px var(--color-black-shadow);
+  border-radius: 8px;
+
+  display: flex;
+}
+
+.linear {
+  width: 50%;
+  background: linear-gradient(to left, #FF5656, #FF8746, #FFEA00, #E06F1E, #C99034);
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.signin-form-container {
+  background-color: #F9F9F9;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .linear {
+    width: 30%;
+  }
+
+  .signin-form-container {
+    flex-grow: 1;
+  }
+}
+
+.signin-form-container > img {
+  width: 30%;
+}
+
+.signin-form-container > h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  text-shadow: 5px 3px 3px var(--color-black-shadow);
+}
+
+@media (max-width: 700px) {
+  .linear {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+  }
+
+  .signin-form-container {
+    flex-grow: 1;
+  }
+
+
+  .signin-form-container > img {
+    width: clamp(8rem, 12rem, 30%);
+  }
+
+  .signin-form-container > h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-shadow: 5px 3px 3px var(--color-black-shadow);
+  }
+}
+
+@media (max-width: 425px) {
+  .signin-container, .signin-form-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFFFFF;
+  }
+
+  .signin-container {
+    box-shadow: none;
+  }
+}
+
+.signin-form {
+  width: 70%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input-username, .input-password {
+  padding: 1.5rem;
+
+  background-color: #CECCCC;
+
+  font-size: 1.2rem;
+  font-weight: 700;
+
+  border: none;
+  border-radius: 13px;
+}
+
+.input-submit {
+  padding: 1rem;
+
+  background-color: #EFBD46;
+
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  border: none;
+  border-radius: 13px;
+
+  cursor: pointer;
+}
+
+.input-submit:hover {
+  background-color: #cca240;
+
+  transition: background ease 250ms;
+}
+
+.signin-form-container > a {
+  text-decoration: none;
+  color: var(--color-black);
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.signin-form-container > a:hover {
+  text-decoration: underline;
+}
