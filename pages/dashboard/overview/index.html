@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Overview</title>
+
+  <!-- Style Sheets -->
+  <link rel="stylesheet" href="../../../assets/css/global-style.css">
+  <link rel="stylesheet" href="../../../assets/css/header-dashboard-style.css">
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- Leaflet Import -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head>
+<body>
+  <div id="wrapper">
+
+    <!-- Same code to other nav menu but the classname "current-nav" will go where the current nav menu is. -->
+    <header>
+      <nav>
+        <ul>
+          <li class="current-nav nav-menu"><a href="#"><img class="icon-nav" src="../../../assets/images/overview-icon-yellow.png" alt="icon"> Overview</a></li>
+          <li class="nav-menu"><a href="../history/index.html"><img class="icon-nav" src="../../../assets/images/history-icon-white.png" alt="icon"> History</a></li>
+          <li class="nav-menu"><a href="../profile/index.html"><img class="icon-nav" src="../../../assets/images/manage-profile-icon-white.png" alt="icon"> Manage Profile</a></li>
+          <li class="nav-menu"><a href="../settings/index.html"><img class="icon-nav" src="../../../assets/images/settings-icon-white.png" alt="icon"> Settings</a></li>
+        </ul>
+      </nav>
+      <button id="logout_button"><img class="icon-nav" src="../../../assets/images/logout-icon.png" alt="icon"> Logout</button>
+
+      <!-- Tablet to Phone Size Menu -->
+      <button id="menu_button" onclick="openNav()"><img src="../../../assets/images/menu-icon.png" alt="icon"> Menu</button>
+      <div id="side_nav_bg">
+        <span class="close-button" onclick="closeNav()">Close</span>
+        <nav>
+          <ul>
+            <li class="current-nav side-nav-menu"><a href="#"><img class="icon-nav" src="../../../assets/images/overview-icon-yellow.png" alt="icon"> Overview</a></li>
+            <li class="side-nav-menu"><a href="../history/index.html"><img class="icon-nav" src="../../../assets/images/history-icon-white.png" alt="icon"> History</a></li>
+            <li class="side-nav-menu"><a href="../profile/index.html"><img class="icon-nav" src="../../../assets/images/manage-profile-icon-white.png" alt="icon"> Manage Profile</a></li>
+            <li class="side-nav-menu"><a href="../settings/index.html"><img class="icon-nav" src="../../../assets/images/settings-icon-white.png" alt="icon"> Settings</a></li>
+            <li class="side-nav-menu"><a href="#" class="logout-button"><img class="icon-nav" src="../../../assets/images/logout-icon-white.png" alt="icon"> Logout</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div id="map"></div>
+    </main>
+  </div>
+
+  <!-- SCRIPTS -->
+   <script src="../../../assets/js/header-dashboard-script.js"></script>
+   <script src="../logout-script.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>

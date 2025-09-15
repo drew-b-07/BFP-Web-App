@@ -2,7 +2,12 @@
 
 :root {
   --color-black: #000000;
+  --color-white: #FFFFFF;
   --color-black-shadow: rgba(0, 0, 0, .25);
+  --color-header-bg: #FF5900;
+  --color-side-nav-bg: #111;
+  --color-logout-button-bg: #FBD641;
+  --color-current-nav-text: #FFFF00;
 }
 
 * {

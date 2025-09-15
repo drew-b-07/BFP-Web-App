@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Profile</title>
+
+  <!-- Style Sheets -->
+  <link rel="stylesheet" href="../../../assets/css/global-style.css">
+  <link rel="stylesheet" href="../../../assets/css/header-dashboard-style.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="wrapper">
+
+    <!-- Same code to other nav menu but the classname "current-nav" will go where the current nav menu is. -->
+    <header>
+      <nav>
+        <ul>
+          <li class="nav-menu"><a href="../overview/index.html"><img class="icon-nav" src="../../../assets/images/overview-icon-white.png" alt="icon"> Overview</a></li>
+          <li class="nav-menu"><a href="../history/index.html"><img class="icon-nav" src="../../../assets/images/history-icon-white.png" alt="icon"> History</a></li>
+          <li class="current-nav nav-menu"><a href="#"><img class="icon-nav" src="../../../assets/images/manage-profile-icon-yellow.png" alt="icon"> Manage Profile</a></li>
+          <li class="nav-menu"><a href="../settings/index.html"><img class="icon-nav" src="../../../assets/images/settings-icon-white.png" alt="icon"> Settings</a></li>
+        </ul>
+      </nav>
+      <button id="logout_button"><img class="icon-nav" src="../../../assets/images/logout-icon.png" alt="icon"> Logout</button>
+
+      <!-- Tablet to Phone Size Menu -->
+      <button id="menu_button" onclick="openNav()"><img src="../../../assets/images/menu-icon.png" alt="icon"> Menu</button>
+      <div id="side_nav_bg">
+        <span class="close-button" onclick="closeNav()">Close</span>
+        <nav>
+          <ul>
+            <li class="side-nav-menu"><a href="../overview/index.html"><img class="icon-nav" src="../../../assets/images/overview-icon-white.png" alt="icon"> Overview</a></li>
+            <li class="side-nav-menu"><a href="../history/index.html"><img class="icon-nav" src="../../../assets/images/history-icon-white.png" alt="icon"> History</a></li>
+            <li class="current-nav side-nav-menu"><a href="#"><img class="icon-nav" src="../../../assets/images/manage-profile-icon-yellow.png" alt="icon"> Manage Profile</a></li>
+            <li class="side-nav-menu"><a href="../settings/index.html"><img class="icon-nav" src="../../../assets/images/settings-icon-white.png" alt="icon"> Settings</a></li>
+            <li class="side-nav-menu"><a href="#" class="logout-button"><img class="icon-nav" src="../../../assets/images/logout-icon-white.png" alt="icon"> Logout</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <h1>Manage Profile Page</h1>
+    </main>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="../../../assets/js/header-dashboard-script.js"></script>
+  <script src="../logout-script.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
