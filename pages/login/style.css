@@ -29,7 +29,7 @@
 .signin-form-container {
   padding: 1rem;
 
-  background-color: #F9F9F9;
+  background-color: var(--color-auth-form-bg);
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
 
