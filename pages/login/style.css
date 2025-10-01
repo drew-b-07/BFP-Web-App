@@ -16,13 +16,19 @@
 }
 
 .linear {
+  padding: 1rem;
+
   width: 50%;
   background: linear-gradient(to left, #FF5656, #FF8746, #FFEA00, #E06F1E, #C99034);
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
+
+  transition: 300ms;
 }
 
 .signin-form-container {
+  padding: 1rem;
+
   background-color: #F9F9F9;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
@@ -33,15 +39,19 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+
+  transition: 300ms;
 }
 
 @media (max-width: 1024px) {
   .linear {
     width: 30%;
+    transition: 300ms;
   }
 
   .signin-form-container {
     flex-grow: 1;
+    transition: 300ms;
   }
 }
 
@@ -56,14 +66,21 @@
 }
 
 @media (max-width: 700px) {
+  .signin-container {
+    transition: 300ms;
+  }
+
   .linear {
-    visibility: hidden;
-    opacity: 0;
-    display: none;
+    width: 0;
+    padding: 0;
+
+    transition: 300ms;
   }
 
   .signin-form-container {
     flex-grow: 1;
+
+    transition: 300ms;
   }
 
 
@@ -83,6 +100,8 @@
     width: 100vw;
     height: 100vh;
     background-color: #FFFFFF;
+
+    transition: 300ms;
   }
 
   .signin-container {

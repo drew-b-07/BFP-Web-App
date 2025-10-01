@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign In</title>
+  <title>Forgot Password</title>
 
   <link rel="stylesheet" href="../../assets/css/global-style.css">
   <link rel="stylesheet" href="../../assets/css/wifi-popup-and-button-style.css">
@@ -11,22 +11,14 @@
 </head>
 <body>
   <div id="wrapper">
-    <div class="signin-container">
-      <div class="linear">
-
-      </div>
-      <div class="signin-form-container">
-        <img src="../../assets/images/user-icon.png" alt="User Icon">
-        <h1>ADMIN</h1>
-        <form class="signin-form">
-          <input type="text" class="input-username" placeholder="USERNAME" required />
-          <input type="password" class="input-password" placeholder="PASSWORD" required />
-          <input type="submit" class="input-submit" value="SIGN IN">
-        </form>
-        <a href="../forgotpass/index.html">FORGOT PASSWORD?</a>
-      </div>
+    <div class="forgotpass-container">
+      <h2>Forgot Password</h2>
+      <p>We will send you an e-mail to reset your password.</p>
+      <form action="#" method="post">
+        <input type="email" name="email" id="email" required />
+        <input type="submit" id="forgotpass_btn" value="Send Email." />
+      </form>
     </div>
-
   </div>
 
   <button id="wifi_button" title="Not Connected">
@@ -56,7 +48,6 @@
     </div>
   </div>
 
-  <!-- SCRIPTS -->
   <script src="../../assets/js/wifi-popup-and-button-script.js"></script>
   <script src="./script.js"></script>
 </body>

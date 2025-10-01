@@ -1,0 +1,121 @@
+#wifi_button {
+  padding: 1rem;
+
+  background: none;
+  border: none;
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  position: fixed;
+  right: 0.5rem;
+  bottom: 0.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  transition: 200ms;
+}
+
+#wifi_button:hover {
+  background-color: #cecece;
+}
+
+#wifi_status {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+@media (max-width: 860px) {
+  #wifi_status {
+    display: none;
+  }
+}
+
+#wifi_icon {
+  width: clamp(2rem, 3rem, 5rem);
+}
+
+@media (max-width: 425px) {
+  #wifi_button {
+    bottom: auto;
+    top: 0.5rem;
+  }
+}
+
+.wifi-list-overlay {
+  min-height: 100vh;
+  min-width: 100vw;
+
+  background-color: #0000003b;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: none;
+  opacity: 0;
+
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+
+  transition: all ease 300ms;
+}
+
+.wifi-list-container {
+  width: 60vw;
+  padding: 1rem;
+  background-color: #F9F9F9;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.wifi-list-buttons-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#wifi_list_close_button {
+  width: clamp(2rem, 3rem, 4rem);
+  cursor: pointer;
+}
+
+.wifi-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.wifi-container {
+  padding: 1rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  cursor: pointer;
+
+  transition: 250ms;
+}
+
+.wifi-container:hover {
+  background-color: #cecece;
+}
+
+.wifi-container > img {
+  width: clamp(2rem, 3rem, 4rem);
+}
+
+.wifi-container > span {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.wifi-connected {
+  background-color: #ff59004f;
+}
