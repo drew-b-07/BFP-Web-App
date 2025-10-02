@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign In</title>
 
+  <!-- Leaflet JS Import -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <!-- Styles -->
   <link rel="stylesheet" href="../../assets/css/global-style.css">
   <link rel="stylesheet" href="../../assets/css/wifi-popup-and-button-style.css">
   <link rel="stylesheet" href="./style.css">
@@ -12,18 +17,70 @@
 <body>
   <div id="wrapper">
     <div class="signin-container">
-      <div class="linear">
-
-      </div>
+      <div class="linear"></div>
       <div class="signin-form-container">
         <img src="../../assets/images/user-icon.png" alt="User Icon">
         <h1>ADMIN</h1>
         <form class="signin-form">
-          <input type="text" class="input-username" placeholder="USERNAME" required />
-          <input type="password" class="input-password" placeholder="PASSWORD" required />
-          <input type="submit" class="input-submit" value="SIGN IN">
+          <input type="text" class="input-username" id="username_signin" placeholder="USERNAME" required />
+          <input type="password" class="input-password" id="pw_signin" placeholder="PASSWORD" required />
+          <input type="submit" class="input-submit" id="signin_btn" value="SIGN IN">
         </form>
         <a href="../forgotpass/index.html">FORGOT PASSWORD?</a>
+      </div>
+
+      <div class="signup-form-container">
+        <div class="header">
+          <h2>Fill-up to Sign Up</h2>
+          <p id="instruction" title="Instruction">?</p>
+        </div>
+        <form class="signup-form">
+          <div class="user-login-cred">
+            <div class="input">
+              <label for="username">Username</label>
+              <input type="text" name="username" class="username" id="username_signup" placeholder="USERNAME" required />
+            </div>
+            <div class="input">
+              <label for="password">Password</label>
+              <input type="password" name="password" class="password" id="pw_signup" placeholder="PASSWORD" required />
+            </div>
+          </div>
+          <div class="user-contact">
+            <div class="input">
+              <label for="email">Email</label>
+              <input type="email" name="Email" class="email" id="email_signup" placeholder="EMAIL" required />
+            </div>
+            <div class="input">
+              <label for="phone-number">Phone Number</label>
+              <input type="tel" name="phone-number" class="phone-number" id="pn_signup" placeholder="PHONE NUMBER" required>
+            </div>
+          </div>
+          <div class="user-location">
+            <input type="hidden" class="latitude" id="latitude" value="" />
+            <input type="hidden" class="longitude" id="longitude" value="" />
+            <div class="input">
+              <label for="fire-station-name">Fire Station Name</label>
+              <input type="text" class="fire-station-name" id="fsn_signup" placeholder="FIRE STATION NAME" required disabled>
+            </div>
+            <div class="user-address">
+              <div class="input">
+                <label for="country">Country</label>
+                <input type="text" name="country" class="country" id="country" placeholder="Country" disabled required/>
+              </div>
+              <div class="input">
+                <label for="province">Province</label>
+                <input type="text" name="province" class="province" id="province" placeholder="Province" disabled required/>
+              </div>
+              <div class="input">
+                <label for="municipality">Municipality</label>
+                <input type="text" name="municipality" class="municipality" id="municipality" placeholder="Municipality" disabled required/>
+              </div>
+            </div>
+          </div>
+          <div id="map"></div>
+          <input type="hidden" class="device-id" id="device_id" value="" />
+          <input type="submit" class="input-submit" id="signup_btn" value="Submit" />
+        </form>
       </div>
     </div>
 

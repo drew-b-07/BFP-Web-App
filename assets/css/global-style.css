@@ -9,6 +9,8 @@
   --color-logout-button-bg: #FBD641;
   --color-current-nav-text: #FFFF00;
   --color-auth-form-bg: #F9F9F9;
+  --color-input-bg: #CECCCC;
+  --color-disabled-input-bg: #636363;
 }
 
 * {
