@@ -79,7 +79,7 @@ signin_button.addEventListener("click", (e) => {
 
 
 
-var map = L.map('map', {
+let map = L.map('map', {
     center: [0, 0],
     zoom: 13,
     worldCopyJump: false,
@@ -87,9 +87,13 @@ var map = L.map('map', {
     maxBoundsViscosity: 1.0
 });
 
-setInterval(() => {
-  map.invalidateSize();
-}, 100);
+let invalidateTimeout;
+map.on('zoomend moveend', () => {
+  clearTimeout(invalidateTimeout);
+  invalidateTimeout = setTimeout(() => {
+    map.invalidateSize(); // Re-rendering the map to make performance good even in small screen sizes.
+  }, 100);
+});
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     noWrap: true,
