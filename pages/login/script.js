@@ -8,6 +8,13 @@ const input_username = document.getElementsByClassName("input-username")[0];
 const input_password = document.getElementsByClassName("input-password")[0];
 const signin_button = document.getElementById("signin_btn");
 
+const fire_station_name = document.getElementById("fsn");
+const country_input = document.getElementById("country");
+const province_input = document.getElementById("province");
+const municipality_input = document.getElementById("municipality");
+
+
+
 instruction.addEventListener("click", (e) => {
   alert("Please fill out ALL inputs. Username/password will be used for device login. Email and phone are required for contact. Fire station name, country, province, and municipality will be automatically filled when you pin your location on the embedded map.");
 });
@@ -80,6 +87,10 @@ var map = L.map('map', {
     maxBoundsViscosity: 1.0
 });
 
+setInterval(() => {
+  map.invalidateSize();
+}, 100);
+
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     noWrap: true,
     maxZoom: 19,
@@ -88,6 +99,24 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 map.fitBounds([[-90, -180], [90, 180]]);
 
-document.getElementById("map").addEventListener("click", function () {
-    map.invalidateSize();
+let marker = null;
+map.addEventListener("click", (e) => {
+  const api_key = "pk.8329f7efe1c3c979a63e9e427efbffcc";
+
+  fetch(`https://us1.locationiq.com/v1/reverse?key=${api_key}&lat=${e.latlng.lat}&lon=${e.latlng.lng}&format=json`)
+  .then(res => res.json())
+  .then(data => {
+    country_input.value = data.address.country;
+    province_input.value = data.address.state;
+    municipality_input.value = data.address.city || data.address.town || data.address.village;
+    fire_station_name.value = municipality_input.value + " Fire Station";
+    // console.log(`Country: ${country}, State: ${state}, City: ${city}`);
+  })
+  .catch(err => console.error(err));
+
+  if(!marker) {
+    marker = L.marker(e.latlng, {draggable: true}).addTo(map);
+  } else {
+    marker.setLatLng(e.latlng);
+  }
 });
