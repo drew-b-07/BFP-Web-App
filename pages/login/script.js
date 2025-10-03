@@ -16,7 +16,7 @@ const municipality_input = document.getElementById("municipality");
 
 
 instruction.addEventListener("click", (e) => {
-  alert("Please fill out ALL inputs. Username/password will be used for device login. Email and phone are required for contact. Fire station name, country, province, and municipality will be automatically filled when you pin your location on the embedded map.");
+  alert("Please fill out ALL inputs. Username/password will be used for device login. Email and phone are required for contact. Fire station name, country, province, and municipality will be automatically filled when you pin your location on the map.");
 });
 
 
@@ -27,13 +27,18 @@ signin_button.addEventListener("click", (e) => {
   let username = input_username.value.trim();
   let password = input_password.value.trim();
 
-  if(username.length < 5 || username === undefined || username === null || username === "") {
-    alert("Input your username to login");
+  if(username === undefined || username === null || username === "") {
+    alert("Input your username to login.");
     return;
   }
 
-  if(password.length < 8 || password === undefined || password === null || password === "") {
-    alert("Input your password to login");
+  if(password === undefined || password === null || password === "") {
+    alert("Input your password to login.");
+    return;
+  }
+
+  if(username.length < 8 || password.length < 8){
+    alert("Username and Password must be at least 8 characters.");
     return;
   }
 
@@ -49,8 +54,10 @@ signin_button.addEventListener("click", (e) => {
    */
 
   // Change e2 ng default username and password.
-  let has_acc = false;
-  if((username == "kobepogi" && password == "kobepogi") && !has_acc) {
+  let has_acc = false; // From ESP32 data.json
+  const DEFAULT_USERNAME = "kobepogi"; // From ESP32 data.json
+  const DEFAULT_PW = "kobepogi"; // From ESP32 data.json
+  if((username == DEFAULT_USERNAME && password == DEFAULT_PW) && !has_acc) {
     linear_container.classList.toggle("linear-cover-left");
     linear_container.style.borderTopRightRadius = "0";
     linear_container.style.borderBottomRightRadius = "0";
@@ -70,11 +77,17 @@ signin_button.addEventListener("click", (e) => {
         linear_container.style.borderBottomRightRadius = "8px";
       }, 100);
     }, 700);
-  } else {
+
+    return;
+  } 
+  
+  if((username == DEFAULT_USERNAME && password == DEFAULT_PW) && has_acc) {
     alert("You are already signed up to the system.\nSign in your account.");
+    return;
   }
 
-  // window.location.replace("../dashboard/overview/index.html");
+  // Add conditions to check if yung username and pw na ininput nasa db ba or wala.
+  window.location.replace("../dashboard/overview/index.html");
 });
 
 

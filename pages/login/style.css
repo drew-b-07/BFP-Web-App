@@ -83,6 +83,8 @@
 }
 
 .header {
+  width: 100%;
+
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -124,10 +126,6 @@ label {
 .input {
   display: flex;
   flex-direction: column;
-}
-
-.fire-station-name, .country, .province, .municipality {
-  background-color: black;
 }
 
 .input > input {
@@ -215,6 +213,10 @@ label {
     font-size: 3.5rem;
     font-weight: 900;
     text-shadow: 5px 3px 3px var(--color-black-shadow);
+  }
+
+  .header {
+    width: fit-content;
   }
 }
 

@@ -1,7 +1,22 @@
 #wrapper {
   min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
 }
 
 #map {
-  height: 80vh;
+  width: 100%;
+  height: 92.65vh;
+}
+
+.close-btn {
+  margin-top: 5px;
+  width: 100%;
+
+  font-size: 1.8rem;
 }
