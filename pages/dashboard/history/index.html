@@ -42,7 +42,51 @@
     </header>
 
     <main>
-      <h1>History Page</h1>
+      <div class="search-bar-container">
+        <b>Establishment</b>
+        <select id="establishments_dropdown_menu">
+        </select>
+      </div>
+      <div class="history-list-container">
+        <table class="history-table" id="history_table">
+          <thead>
+            <tr>
+              <th class="est-name-history-th">Establishment</th>
+              <th class="time-history-th">Time</th>
+              <th class="date-history-th">Date</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="history-details-overlay">
+        <div class="history-details-container">
+          <div class="images-container" id="images_container">
+            <img class="image-container" id="image_container" />
+            <div class="img-control">
+              <button id="back_image">&larr;</button>
+              <p id="img_current_pos">1</p>
+              <p class="pos-and-total-divider">/</p>
+              <p id="img_total">5</p>
+              <button id="next_image">&rarr;</button>
+            </div>
+          </div>
+          <div class="info-container" id="info_container">
+            <div class="info-container-tab">
+              <h2>Details</h2>
+              <img src="../../../assets/images/close-button1.png" alt="Close" title="Close" />
+            </div>
+            <div class="info-container-body">
+              <p class="establishment-name" id="establishment_name"></p>
+              <p class="owner-name" id="owner_name"></p>
+              <p class="owner-email" id="owner_email"></p>
+              <p class="owner-pn" id="owner_pn"></p>
+              <p class="history-time" id="history_time"></p>
+              <p class="history-date" id="history_date"></p>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   </div>
 

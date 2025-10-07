@@ -47,7 +47,8 @@ async function loadBoundaryAndUsers() {
     filter: function(feature, layer) {
       return feature.geometry.type === "Polygon" || feature.geometry.type === "MultiPolygon";
     },
-    style: { color: "blue", weight: 2, fillOpacity: 0.2 }
+    style: { color: "blue", weight: 2, fillOpacity: 0.2 },
+    interactive: false
   }).addTo(map);
 
   // Fit map to boundary and restrict panning to bounding box

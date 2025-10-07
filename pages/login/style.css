@@ -43,7 +43,14 @@
   padding: 1rem;
 
   width: 50%;
-  background: linear-gradient(to left, #FF5656, #FF8746, #FFEA00, #E06F1E, #C99034);
+  background: linear-gradient(
+    to left, 
+    #FF5656, 
+    #FF8746, 
+    #FFEA00, 
+    #E06F1E, 
+    #C99034
+  );
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
 
