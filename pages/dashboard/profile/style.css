@@ -1,3 +1,52 @@
+
 #wrapper {
   min-height: 100vh;
+}
+
+main {
+  padding: 40px;
+}
+
+.profile-card {
+  background-color: #d3d3d3;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.profile-card h2 {
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 1px solid #000;
+  padding-bottom: 5px;
+}
+
+.profile-card label {
+  display: block;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.profile-card input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #999;
+}
+
+.change-btn {
+  background-color: #ffcc00;
+  border: none;
+  padding: 5px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.phone-field {
+  display: flex;
+  align-items: center;
 }

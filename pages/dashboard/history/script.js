@@ -1,3 +1,12 @@
+// Select the close button
+const closeBtn = document.getElementById('closeBtn');
+const overlay = document.querySelector('.history-details-overlay');
+
+// Add click event to hide overlay
+closeBtn.addEventListener('click', function() {
+  overlay.style.display = 'none';
+});
+
 // Fetch history data from database.
 const api_key = "pk.8329f7efe1c3c979a63e9e427efbffcc";
 const history = [ // Example ONly

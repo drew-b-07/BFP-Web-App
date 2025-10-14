@@ -55,6 +55,12 @@ main {
   text-align: left;
 }
 
+.history-row:hover {
+  background-color: #ff590063;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
 td {
   padding: 1rem;
   font-size: 1.5rem;
@@ -66,7 +72,7 @@ td {
 }
 
 .history-details-overlay {
-  background-color: #2424243f;
+  background-color: #1c1c1c9a;
 
   width: 100vw;
   height: 100vh;
@@ -76,42 +82,95 @@ td {
   left: 0;
 }
 
-.history-details-container{
+.history-details-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 /* IMAGES CONTAINER */
-.images-container{
+.images-container {
   border: 1px solid black;
   max-width: 50vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
 }
 
-.image-container{
-  border: 1px solid red;
-  width: 300px;
+.image-container {
+  width: 500px; /* match screenshot size */
   height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: none;
 }
 
-.img-control{
+.img-control {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.img-control button {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+  font-size: 18px;
+}
+
+.img-control p {
+  color: white;
+  margin: 0 5px;
 }
 
 /* DETAILS CONTAINER */
-.info-container-tab{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-
-.info-container-tab img{
-  top: 0;
-}
-
-.info-container-body{
+.info-container {
   background: white;
+  width: 500px; /* match image width */
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+
+.info-container-tab {
+  display: flex;
+  justify-content: space-between; /* heading left, close right */
+  align-items: center;
+  padding: 10px 15px;
+  background: #f1f1f1;
+  border-bottom: 1px solid #ccc;
+}
+
+.info-container-tab h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.info-container-tab img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.info-container-body {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.info-container-body p {
+  margin: 0;
+  font-size: 14px;
 }
