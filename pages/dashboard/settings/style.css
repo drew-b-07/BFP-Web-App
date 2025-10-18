@@ -234,6 +234,11 @@ main{
   margin-left: 20px;
 }
 
+.btn-restart:hover,
+.btn-reset:hover{
+  background-color: #f0b800;
+}
+
 /* SETTINGS [WIFI-LIST] STYLE */
 .ap-wifi-list-section{
   margin-left: 120px;
@@ -260,6 +265,10 @@ main{
   align-items: center;
   margin-left: 50px;
   margin-top: 8px;
+}
+
+.btn-wifi-list:hover{
+  background-color: #f0b800;
 }
 
 .wifi-list-icon{
@@ -437,6 +446,134 @@ main{
   font-size: 20px;
   font-weight: 700;
   box-shadow: 0 2px 4px rgba(0,0,0,0.7);
+}
+
+/* WI-FI LIST MODAL BOX */
+.modalBoxWifiList{
+  background-color: #fff;
+
+  width: 800px;
+  height: 700px;
+
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 25px 30px;
+
+  border-radius: 12px;
+  z-index: 1000;
+}
+
+.modalBoxWifiList-container{
+  background-color: #e6e6e6;
+
+  width: 720px;
+  height: 620px;
+  transform: translate(1.2%, 3%);
+}
+
+.x-icon-button{
+  width: 22px;
+  height: 22px;
+}
+
+.close-button-red-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FF0000;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+  border: none;
+  border-radius: 3rem;
+  width: 35px;
+  height: 35px;
+}
+
+.close-button-red-icon:hover{
+  background-color: #ff00006c;
+}
+
+/* WIFI LIST ORIENTATION AND STYLE */
+.wifi-list{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.wifi-list h1{
+  margin-left: 15px;
+}
+
+.wifi-list p{
+  margin-left: 16px;
+  font-size: 18px;
+}
+
+.wifi-list-locked-icon{
+  height: 36px;
+  width: 40px;
+}
+
+/* WIFI ITEM STYLE [NOT CONNECTED] */
+.wifi-item-nc{
+  display: flex;
+
+  padding: 20px;
+  min-width: 100%;
+  height: 80px;
+}
+
+.wifi-details-nc{
+  flex: 1;
+}
+
+/* WIFI ITEM STYLE [CONNECTED] */
+.wifi-item-c{
+  display: flex;
+
+  padding: 20px;
+  min-width: 100%;
+  height: 180px;
+
+  background: #ff59004b;
+}
+
+.wifi-details-c{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+
+.btn-disconnect{
+  background-color: #E61717;
+  color: #fff;
+  
+  text-align: center;
+  border: none;
+  align-self: flex-end;
+
+  padding: 10px 20px;
+  border-radius: 2rem;
+
+  cursor: pointer;
+  box-shadow: 2px 4px 6px 0px rgba(0,0,0,0.2);
+  transition: background-color 0.2s ease;
+
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.btn-disconnect:hover{
+  background-color: #ff00006c;
 }
 
 /* SHOW/HIDE PASSWORD STYLE and CONTAINER*/

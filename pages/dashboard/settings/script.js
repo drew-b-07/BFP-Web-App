@@ -44,9 +44,15 @@ function enterPasswordFirst(){
     document.getElementById("buttonReset").style.display ="none";
 }
 
+function btnWifiList(){
+    document.getElementById("btnWifiListModal").style.display = "block";
+    document.getElementById("overlay").style.display = "block";
+}
+
 function closeModal(){
     document.getElementById("buttonRestart").style.display = "none";
     document.getElementById("buttonReset").style.display = "none";
     document.getElementById("typePassword").style.display = "none";
+    document.getElementById("btnWifiListModal").style.display = "none";
     document.getElementById("overlay").style.display = "none";
 }

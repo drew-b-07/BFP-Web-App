@@ -130,7 +130,7 @@
 
             <div class="ap-wifi-list-section">
               <h2>WI-FI</h2>
-              <button class="btn-wifi-list"><img src="../../../assets/images/wifi-list-settings.png" alt="icon" class="wifi-list-icon">VIEW WIFI LIST</button>
+              <button onclick="btnWifiList()" class="btn-wifi-list"><img src="../../../assets/images/wifi-list-settings.png" alt="icon" class="wifi-list-icon">VIEW WIFI LIST</button>
             </div>
 
           </div>
@@ -188,6 +188,36 @@
         <div class="button-options">
           <button class="btn-cancel" onclick="closeModal()">CANCEL</button>
           <button class="btn-confirm">CONFIRM</button>
+        </div>
+      </div>
+
+      <div class="modalBoxWifiList" id="btnWifiListModal">
+        <button onclick="closeModal()" class="close-button-red-icon"><img class="x-icon-button" src="../../../assets/images/close-button.png" alt="icon"></button>
+        <div class="modalBoxWifiList-container">
+          <ul class="wifi-list">
+            
+            <!-- CONNECTED WIFI -->
+            <li class="wifi-item-c" id="" name="">
+                <img class="wifi-list-locked-icon" src="../../../assets/images/wifi-lock.png" alt="wifi icon" class="wifi-icon">
+
+                <div class="wifi-details-c" id="" name="">
+                  <h1>ConnectPaMahihirap5G</h1>
+                  <p>Connected, Secured</p>
+                </div>
+
+                <button class="btn-disconnect">DISCONNECT</button>
+            </li>
+
+            <!-- NOT CONNECTED WI-FI -->
+            <li class="wifi-item-nc" id="" name="">
+                <img class="wifi-list-locked-icon" src="../../../assets/images/wifi-lock.png" alt="wifi icon" class="wifi-icon">
+
+                <div class="wifi-details-nc" id="" name="">
+                  <h1>ConnectPaMahihirap5G</h1>
+                </div>
+            </li>
+
+          </ul>
         </div>
       </div>
 
