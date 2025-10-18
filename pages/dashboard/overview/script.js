@@ -121,3 +121,9 @@ document.addEventListener('keydown', function(e){
     closeRouting();
   }
 });
+
+// Close Modal for FIRE EMERGENCY ALERT MESSAGE
+function closeModalFireEmergency(){
+  document.getElementById("modal").style.display = "none";
+  document.getElementById("emergency-alert-overlay").style.display = "none";
+}

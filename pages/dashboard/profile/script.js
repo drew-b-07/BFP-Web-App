@@ -21,5 +21,11 @@ function closeModal(){
     document.getElementById("overlay").style.display = "none";
 }
 
+// Close Modal for FIRE EMERGENCY ALERT MESSAGE
+function closeModalFireEmergency(){
+  document.getElementById("modal").style.display = "none";
+  document.getElementById("emergency-alert-overlay").style.display = "none";
+}
+
 //clicking outside the modal to exit
 // document.getElementById("overlay").addEventListener("click", cancelButton);

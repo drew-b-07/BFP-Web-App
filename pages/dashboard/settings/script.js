@@ -56,3 +56,9 @@ function closeModal(){
     document.getElementById("btnWifiListModal").style.display = "none";
     document.getElementById("overlay").style.display = "none";
 }
+
+// Close Modal for FIRE EMERGENCY ALERT MESSAGE
+function closeModalFireEmergency(){
+  document.getElementById("modal").style.display = "none";
+  document.getElementById("emergency-alert-overlay").style.display = "none";
+}

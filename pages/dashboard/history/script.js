@@ -7,6 +7,14 @@ closeBtn.addEventListener('click', function() {
   overlay.style.display = 'none';
 });
 
+// Close Modal for FIRE EMERGENCY ALERT MESSAGE
+function closeModalFireEmergency(){
+  document.getElementById("modal").style.display = "none";
+  document.getElementById("emergency-alert-overlay").style.display = "none";
+}
+
+// document.getElementById("emergency-alert-overlay").addEventListener("click", cancelButton);
+
 // Fetch history data from database.
 const api_key = "pk.8329f7efe1c3c979a63e9e427efbffcc";
 const history = [ // Example ONly
