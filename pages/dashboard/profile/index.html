@@ -41,29 +41,88 @@
       </div>
     </header>
 
-      <main>
-        <div class="profile-card">
-          <h2>PERSONAL INFORMATION</h2>
+    
+    <main>
+      <!-- PROFILE MAIN PAGE -->
+      <div class="profile-card">
+        <h2>PERSONAL INFORMATION</h2>
 
-          <label for="name">NAME</label>
-          <input type="text" id="name" placeholder="">
-
-          <label for="email">EMAIL</label>
-          <div class="phone-field">
-            <input type="email" id="email" placeholder="">
-            <button class="change-btn">CHANGE</button>
-          </div>
-
-          <label for="phone">Phone Number</label>
-          <div class="phone-field">
-            <input type="text" id="phone" placeholder="">
-            <button class="change-btn">CHANGE</button>
-          </div>
-
-          <label for="location">LOCATION</label>
-          <input type="text" id="location" placeholder="">
+        <div class="info-row">
+          <label for="name">Name</label>
+          <input type="text" name="" id="">
         </div>
-      </main>
+
+        <div class="info-row">
+          <label for="email">Email</label>
+          <div class="input-with-button">
+            <input type="email" name="" id="">
+            <button onclick="editEmail()" class="change-btn">CHANGE</button>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <label for="phone">Phone Number </label>
+          <div class="input-with-button">
+            <input type="text" name="" id="">
+            <!-- <input type="text" name="phone-number" class="phone-number" id="pn_signup" placeholder="PHONE NUMBER" required inputmode="numeric" pattern="[0-9]{11}" maxlength="11" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 11);"> -->
+            <button onclick="editPnum()" class="change-btn">CHANGE</button>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <label for="location">Location</label>
+          <input type="text" name="" id="">
+        </div>
+
+        <!-- ENTER OTP MODAL TESTER TO SHOW THE MODAL BOX -->
+          <!-- <button onclick="enterOTP()" class="change-btn">Enter OTP</button> -->
+      </div>
+
+      <!-- PROFILE EDIT MODAL BOX-->
+
+      <!-- MODAL BOX OPACITY BACKGROUND OVERLAY -->
+      <div class="overlay" id="overlay"></div>
+
+      <!-- CHANGE EMAIL MODAL -->
+        <div class="modal" id="changeEmailmodal">
+
+            <label for="email" class="modal-title">Enter New Email:</label>
+            <input type="email" name="" id="">
+
+            <div class="button-options">
+              <button class="btn-cancel" onclick="closeModal()">CANCEL</button>
+              <button class="btn-save-changes">SAVE CHANGES</button>
+            </div>
+
+        </div>
+
+      <!-- CHANGE PHONE NUMBER MODAL -->
+        <div class="modal" id="changePnumModal">
+
+            <label for="pnum">Enter New Phone Number:</label>
+            <input type="text" name="new-phone-number"  id="new-phone-number" inputmode="numeric" pattern="[0-9]{11}" maxlength="11" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 11);">
+
+            <div class="button-options">
+              <button class="btn-cancel" onclick="closeModal()">CANCEL</button>
+              <button class="btn-save-changes">SAVE CHANGES</button>
+            </div>
+
+        </div>
+
+      <!-- OTP TO VERIFY EMAIL MODAL -->
+       <div class="modal" id="enterOTPmodal">
+
+          <label for="otp">Enter OTP to Verify Email:</label>
+          <input type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,6);">
+
+          <div class="button-options">
+            <button class="btn-cancel" onclick="closeModal()">CANCEL</button>
+            <button class="btn-save-changes">SAVE CHANGES</button>
+          </div>
+       </div>
+
+    </main>
+
   </div>
 
   <!-- SCRIPTS -->

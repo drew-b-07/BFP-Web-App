@@ -6,7 +6,7 @@ header {
   background-color: var(--color-header-bg);
 
   padding: 1rem;
-
+  min-height: 75px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,7 +24,7 @@ header > nav > ul {
 }
 
 .nav-menu > a, #logout_button, .side-nav-menu > a {
-  font-size: 1.4rem;
+  font-size: 2rem;
   font-weight: 500;
   color: var(--color-white);
   text-decoration: none;
@@ -40,7 +40,7 @@ header > nav > ul {
 }
 
 .icon-nav {
-  width: clamp(1rem, 2rem, 8vw);
+  width: clamp(2rem, 2.5rem, 8vw);
 }
 
 .current-nav > a {

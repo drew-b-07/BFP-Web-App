@@ -1,3 +1,463 @@
 #wrapper {
   min-height: 100vh;
 }
+
+main{
+  margin: 80px auto;
+}
+
+/* SETTINGS MAIN CONTAINER */
+.settings-container{
+  background-color: #d3d3d3;
+  padding: 30px 50px;
+  border-radius: 20px;
+  max-width: clamp(45vw, 68vw, 98vw);
+  min-height: clamp(10vw, 38vw, 60vw);
+  margin: 0 auto;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+}
+
+.title-settings {
+  font-size: 30px;
+  font-weight: 800;
+  border-bottom: 1px solid #000;
+  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.device-icon{
+  margin-right: 10px;
+  width: clamp(30px, 45px, 80px);
+}
+
+/* SETTINGS [USER ACCOUNT SECTION] STYLE */
+.user-account-section h2{
+  font-size: 30px;
+  font-weight: 800;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.user-account-section label{
+  margin-left: 6px;
+  font-size: 25px;
+  font-weight: 800;
+  color: #000;
+}
+
+/* INPUT + LABEL ROWS */
+.user-account-row{
+  padding: 10px;
+  width: 100%;
+  margin-left: 215px;
+  display: flex;
+  align-items: center;
+}
+
+.user-account-row input {
+  height: 40px;
+  width: 500px;
+  padding: 1rem;
+  border: none;
+  border-radius: 1.2rem;
+  margin-left: 10px;
+  background: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.7);
+}
+
+/* CHANGE BUTTONS STYLE */
+.change-btn {
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 20px;
+  font-size: 20px;
+  transition: background-color 0.3s;
+  margin-left: 10px;
+}
+
+.change-btn:hover {
+  background-color: #f0b800;
+}
+
+/* SETTINGS [SNOOZE SETTINGS] STYLE */
+.snooze-settings-section h2{
+  font-size: 30px;
+  font-weight: 800;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.snooze-settings-row{
+  padding: 10px;
+  width: 100%;
+  margin-left: 215px;
+  display: flex;
+  align-items: center;
+}
+
+.section-title{
+  margin-left: 6px;
+  font-size: 25px;
+  font-weight: 800;
+  color: #000;
+  width: 150px;
+  text-align: center;
+}
+
+.snooze-duration{
+  display: flex;
+  flex-direction: column;
+}
+
+/* SELECT FIELD STYLE */
+.select-title{
+  font-size: 14px;
+  margin-left: 8px;
+  font-weight: 700;
+}
+
+.select-field-style{
+  width: 250px;
+  height: 40px;
+  margin-left: 2px;
+  padding: 1rem;
+  border: none;
+  border-radius: 1.2rem;
+
+  background: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.7);
+}
+
+/* SETTINGS [AP HOTSPOT] STYLE */
+.ap-hotspot-wifi-section{
+  display: flex;
+}
+
+.ap-hotspot-section h2{
+  font-size: 30px;
+  font-weight: 800;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.ap-hotspot-row{
+  padding: 10px;
+  width: 100%;
+  margin-left: 215px;
+  display: flex;
+  align-items: center;
+}
+
+.ap-hotspot-row input{
+  height: 40px;
+  width: 250px;
+  padding: 1rem;
+  border: none;
+  border-radius: 1.2rem;
+  margin-left: 10px;
+  background: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.7);
+}
+
+.ap-hotspot-row label{
+  margin-left: 6px;
+  font-size: 25px;
+  font-weight: 800;
+  color: #000;
+}
+
+.ssid{
+  margin-left: 300px;
+}
+
+/* CHECK BOX HIDDEN NETWORK STYLE */
+.ap-hotspot-checkbox{
+  display: flex;
+  align-items: center;
+  margin-left: 380px;
+}
+
+.ap-hotspot-checkbox label{
+  margin-left: 3px;
+  font-size: 25px;
+  font-weight: 800;
+  color: #000;
+}
+
+.ap-hotspot-checkbox input{
+  width: 25px;
+  height: 25px;
+}
+
+/* AP HOTSPOT FUNCTION BUTTONS */
+.wifi-function-button{
+  display: flex;
+  align-items: center;
+  margin-left: 385px;
+  margin-top: 30px;
+  width: 50%;
+}
+
+.btn-restart{
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 20px;
+  font-size: 20px;
+  transition: background-color 0.3s;
+}
+
+.btn-reset{
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 20px;
+  font-size: 20px;
+  transition: background-color 0.3s;
+  margin-left: 20px;
+}
+
+/* SETTINGS [WIFI-LIST] STYLE */
+.ap-wifi-list-section{
+  margin-left: 120px;
+}
+
+.ap-hotspot-wifi-section h2{
+  font-size: 30px;
+  font-weight: 800;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.btn-wifi-list{
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 20px;
+  font-size: 20px;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+  margin-top: 8px;
+}
+
+.wifi-list-icon{
+  margin-right: 10px;
+  width: clamp(25px, 30px, 90px);
+}
+
+/* OVERLAY FOR MODAL BOXES OF BUTTON RESET AND RESTART */
+.overlay {
+  background-color: #1c1c1c9a;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.modal{
+  background-color: #fff;
+  border-top: 15px solid #ff6a00;
+
+  width: 600px;
+  height: 250px;
+
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 25px 30px;
+
+  border-radius: 12px;
+  z-index: 1000;
+}
+
+/* RESTART & RESET MODAL BOX STYLE */
+.alert-title-container{
+  display: flex;
+  min-width: 100%;
+  min-height: 80%;
+}
+
+.alert-message-icon{
+  height: 60px;
+  width: 60px;
+}
+
+.alert-message-alignment{
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.alert-message-alignment h2{
+  font-size: 30px;
+}
+
+.alert-message-alignment label{
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.alert-message-alignment p{
+  font-size: 18px;
+  font-weight: 300;
+}
+
+/* BUTTON YES OR NO STYLE for both RESET AND RESTART*/
+.button-options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-options img{
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+.btn-no, .btn-yes{
+  display: flex;
+  align-items: center;
+  border: none;
+
+  padding: 10px 35px;
+  border-radius: 2rem;
+
+  cursor: pointer;
+  box-shadow: 2px 4px 6px 0px rgba(0,0,0,0.2);
+  transition: background-color 0.2s ease;
+
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.btn-no, .btn-cancel {
+  background-color: #E61717;
+  color: #fff;
+}
+
+.btn-no:hover, .btn-cancel:hover {
+  background-color: #f3544e9c;
+}
+
+.btn-yes, .btn-confirm {
+  background-color: #4FE300;
+  color: #fff;
+}
+
+.btn-yes:hover, .btn-confirm:hover {
+  background-color: #39db39a2;
+}
+
+.btn-cancel, .btn-confirm{
+  display: flex;
+  align-items: center;
+  border: none;
+
+  padding: 10px 10px;
+  border-radius: 2rem;
+  margin-top: 20px;
+
+  cursor: pointer;
+  box-shadow: 2px 4px 6px 0px rgba(0,0,0,0.2);
+  transition: background-color 0.2s ease;
+
+  font-weight: 600;
+  font-size: 24px;
+}
+
+/* TYPE PASSWORD MODAL BOX STYLE */
+.modaltypePassword{
+  background-color: #fff;
+  border-top: 15px solid #ff6a00;
+
+  width: 400px;
+  height: 200px;
+
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 25px 30px;
+
+  border-radius: 12px;
+  z-index: 1000;
+}
+
+.typePasswordField{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.typePasswordField h2{
+  font-size: 25px;
+}
+
+.typePasswordField input{
+  height: 40px;
+  width: 250px;
+  padding: 1rem;
+  border: none;
+  border-radius: 1.2rem;
+  margin-left: 10px;
+  background: #F2F2F2;
+  font-size: 20px;
+  font-weight: 700;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.7);
+}
+
+/* SHOW/HIDE PASSWORD STYLE and CONTAINER*/
+.password-container {
+  position: relative;
+}
+
+.password-container input{
+  padding-right: 38px;
+}
+
+.password-container .toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+  font-size: 18px;
+}
+
+.password-container .toggle-password:hover {
+  color: #000;
+}

@@ -6,9 +6,11 @@
   <title>Settings</title>
 
   <!-- Style Sheets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="../../../assets/css/global-style.css">
   <link rel="stylesheet" href="../../../assets/css/header-dashboard-style.css">
   <link rel="stylesheet" href="./style.css">
+
 </head>
 <body>
   <div id="wrapper">
@@ -42,7 +44,153 @@
     </header>
 
     <main>
-      <h1>Settings Page</h1>
+      <!-- SETTINGS MAIN CONTAINER -->
+      <div class="settings-container">
+        <h2 class="title-settings"><img src="../../../assets/images/Device Settings.png" alt="icon" class="device-icon">DEVICE SETTINGS</h2>
+        
+        <!-- USER ACCOUNT SECTION -->
+        <div class="user-account-section">
+          <h2>USER ACCOUNT</h2>
+            <div class="user-account-row">
+              <label for="username">USERNAME</label>
+              <input type="text">
+              <button class="change-btn">CHANGE</button>
+            </div>
+
+            <div class="user-account-row">
+              <label for="password">PASSWORD</label>
+              <input type="password">
+              <button class="change-btn">CHANGE</button>
+            </div>
+        </div>
+
+        <!-- SNOOZE SETTINGS SECTION -->
+         <div class="snooze-settings-section">
+          <h2>SNOOZE SETTINGS</h2>
+
+          <div class="snooze-settings-row">
+            <label for="snooze-settings" class="section-title">SNOOZE DURATION</label>
+
+            <div class="snooze-duration">
+              <label for="" class="select-title">MIN</label>
+              <select name="" id="" class="select-field-style">
+                <option value=""></option>
+                <option value="">3 mins</option>
+                <option value="">5 mins</option>
+                <option value="">10 mins</option>
+              </select>
+
+            </div>
+
+            <div class="snooze-duration">
+              <label for="" class="select-title">NO. OF SNOOZES</label>
+              <select name="" id="" class="select-field-style">
+                <option value=""></option>
+                <option value="">1x</option>
+                <option value="">2x</option>
+                <option value="">3x</option>
+                <option value="">4x</option>
+                <option value="">5x</option>
+              </select>
+              
+            </div>
+
+          </div>
+         </div>
+
+         <!-- AP HOTSPOT SECTION + WIFI LIST -->
+          <div class="ap-hotspot-wifi-section">
+
+            <div class="ap-hotspot-section">
+            <h2>HOTSPOT (AP MODE)</h2>
+              <div class="ap-hotspot-row ssid">
+                <label for="SSID">SSID</label>
+                <input type="text">
+              </div>
+
+              <div class="ap-hotspot-row">
+                <label for="password">PASSWORD</label>
+                    <div class="password-container">
+                        <input type="password" class="ip-password" id="password">
+                        <i class="fa-solid fa-eye-slash toggle-password" id="togglePassword"></i>
+                    </div>
+              </div>
+
+              <div class="ap-hotspot-checkbox">
+                <input type="checkbox">
+                <label for="hiddennetwork">HIDDEN NETWORK</label>
+              </div>
+
+              <div class="wifi-function-button">
+                <button onclick="btnRestart()" class="btn-restart">RESTART</button>
+                <button onclick="btnReset()" class="btn-reset">RESET</button>
+              </div>
+            </div>
+
+
+            <div class="ap-wifi-list-section">
+              <h2>WI-FI</h2>
+              <button class="btn-wifi-list"><img src="../../../assets/images/wifi-list-settings.png" alt="icon" class="wifi-list-icon">VIEW WIFI LIST</button>
+            </div>
+
+          </div>
+
+      </div>
+
+      <!-- OVERLAY AND MODAL BOX FOR RESET AND RESTART BUTTON -->
+      <div class="overlay" id="overlay"></div>
+
+      <!-- RESTART BUTTON MODAL BOX -->
+      <div class="modal" id="buttonRestart">
+        <div class="alert-title-container">
+          <img class="alert-message-icon" src="../../../assets/images/alert-message-icon.png" alt="icon">
+          <div class="alert-message-alignment">
+            <h2>Are you sure?</h2>
+            <label class="" for="condition"> Are you sure you want to restart?</label>
+          </div>
+        </div>
+
+        <div class="button-options">
+          <button class="btn-no" onclick="closeModal()"><img src="../../../assets/images/no-icon.png" alt="icon">NO</button>
+          <button class="btn-yes"><img src="../../../assets/images/yes-icon.png" alt="icon">YES</button>
+        </div>
+
+      </div>
+      <!-- RESET BUTTON MODAL BOX -->
+      <div class="modal" id="buttonReset">
+        <div class="alert-title-container">
+          <img class="alert-message-icon" src="../../../assets/images/alert-message-icon.png" alt="icon">
+          <div class="alert-message-alignment">
+            <h2>Are you sure?</h2>
+            <label class="" for="condition">Are you sure you want to reset?</label>
+            <p>Reset will restore settings to default, 
+              <br>and data will also be deleted.</p>
+          </div>
+        </div>
+
+        <div class="button-options">
+          <button class="btn-no" onclick="closeModal()"><img src="../../../assets/images/no-icon.png" alt="icon">NO</button>
+          <button class="btn-yes" onclick="enterPasswordFirst()"><img src="../../../assets/images/yes-icon.png" alt="icon">YES</button>
+        </div>
+
+      </div>
+
+      <!-- TYPE PASSWORD MODAL BOX -->
+      <div class="modaltypePassword" id="typePassword">
+        <div class="typePasswordField">
+          <h2>TYPE the PASSWORD</h2>
+            <div class="password-container">
+                <input type="password" class="ip-password" id="showtypePassword">
+                <i class="fa-solid fa-eye-slash toggle-password" id="togglePassword2"></i>
+            </div>
+        </div>
+
+        <div class="button-options">
+          <button class="btn-cancel" onclick="closeModal()">CANCEL</button>
+          <button class="btn-confirm">CONFIRM</button>
+        </div>
+      </div>
+
     </main>
   </div>
 

@@ -4,20 +4,23 @@
 }
 
 main {
-  padding: 40px;
+  margin: 150px auto;
 }
 
+/* PROFILE MAIN CONTAINER */
 .profile-card {
   background-color: #d3d3d3;
-  padding: 30px;
-  border-radius: 10px;
-  max-width: 600px;
+  padding: 30px 50px;
+  border-radius: 20px;
+  max-width: clamp(25vw, 50vw, 75vw);
+  min-height: clamp(0vw, 25vw, 50vw);
   margin: 0 auto;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.2);
 }
 
 .profile-card h2 {
   margin-top: 0;
-  font-size: 18px;
+  font-size: 32px;
   font-weight: bold;
   border-bottom: 1px solid #000;
   padding-bottom: 5px;
@@ -27,26 +30,162 @@ main {
   display: block;
   font-weight: bold;
   margin-top: 15px;
+  font-size: 20px;
 }
 
 .profile-card input {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  border-radius: 5px;
-  border: 1px solid #999;
+  flex: 1;
+  padding: 10px 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  font-weight: bold;
+  max-width: 50rem;
 }
 
+
+/* CHANGE BUTTONS STYLE */
 .change-btn {
   background-color: #ffcc00;
   border: none;
-  padding: 5px 10px;
-  margin-left: 10px;
+  border-radius: 15px;
+  margin-left: 15px;
   cursor: pointer;
   font-weight: bold;
+  padding: 8px 20px;
+  font-size: 18px;
+  transition: background-color 0.3s;
 }
 
-.phone-field {
+.change-btn:hover {
+  background-color: #f0b800;
+}
+
+/* ALIGNMENT FOR CONTENT INSIDE */
+.info-row {
   display: flex;
   align-items: center;
+  margin: 40px 0;
+  gap: 2rem;
+}
+
+.info-row label {
+  flex: 0 0 80px;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: right;
+}
+
+.input-with-button {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+/* MODAL BOX OVERLAY */
+.overlay {
+  background-color: #1c1c1c9a;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+/* MODAL BOX CONTAINER STYLE AND INSIDE */
+.modal{
+  background-color: #fff;
+  border-top: 15px solid #ff6a00;
+
+  width: 600px;
+  height: 180px;
+
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 25px 30px;
+
+  border-radius: 12px;
+  z-index: 1000;
+}
+
+  /* display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  width: 80%;
+  max-width: 300px;
+  z-index: 20;
+  text-align: left; */
+
+.modal label {
+  margin-left: 6px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+}
+
+.modal input{
+  margin-top: 2px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #c5c5c5;
+  border-radius: 1.5rem;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.modal input:focus{
+  border-color: #ff6a00;
+}
+
+/* BUTTONS OPTIONS*/
+.button-options {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem;
+  margin-top: 20px;
+}
+
+/* BUTTON STYLES */
+.btn-cancel, .btn-save-changes {
+  border: none;
+  padding: 10px 18px;
+  border-radius: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 2px 4px 6px 0px rgba(0,0,0,0.2);
+  transition: background-color 0.2s ease;
+}
+
+.btn-cancel {
+  background-color: #E61717;
+  color: #fff;
+}
+
+.btn-cancel:hover {
+  background-color: #f3544e9c;
+}
+
+.btn-save-changes {
+  background-color: #4FE300;
+  color: #fff;
+}
+
+.btn-save-changes:hover {
+  background-color: #39db39a2;
 }

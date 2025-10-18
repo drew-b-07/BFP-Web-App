@@ -205,4 +205,4 @@ next_image.addEventListener("click", () => {
   }
 });
 
-document.querySelector(".info-container-tab > img").addEventListener("click", (e) => { alert("Hello Arjen!"); });
+// document.querySelector(".info-container-tab > img").addEventListener("click", (e) => { alert("Hello Arjen!"); });
