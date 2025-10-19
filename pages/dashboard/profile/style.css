@@ -283,16 +283,16 @@ main {
 }
 
 /* RESPONSIVENESS */
-/* --- TABLETS (max-width: 1024px) --- */
-@media (max-width: 1024px) {
+/* --- Large Laptops & Small Desktops (max-width: 1200px) --- */
+@media (max-width: 1200px) {
  main {
-  margin: 100px auto;
-  padding: 0 2rem;
+  margin: 120px auto;
+  padding: 0 3vw;
  }
 
  .profile-card {
   padding: 25px 40px;
-  max-width: 80vw;
+  max-width: 70vw;
  }
 
  .profile-card h2 {
@@ -300,113 +300,104 @@ main {
  }
 
  .info-row {
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1rem;
- }
-
- .info-row label {
-  text-align: left;
-  font-size: 18px;
-  flex: none;
- }
-
- .profile-card input {
-  width: 100%;
-  max-width: 100%;
+  gap: 1.5rem;
  }
 
  .change-btn {
-  padding: 8px 16px;
+  padding: 6px 16px;
   font-size: 16px;
  }
 
  .modal {
-  width: 80%;
-  height: auto;
-  padding: 20px;
- }
-
- .button-options {
-  flex-direction: column;
-  gap: 10px;
-  margin: 1rem 0;
- }
-
- .btn-cancel,
- .btn-save-changes {
-  width: 100%;
- }
-
- /* Emergency alert modal */
- .emergency-alert-container {
-  width: 90%;
-  height: auto;
- }
-
- .alert-icon-imagesize {
-  width: 150px;
-  height: 150px;
- }
-
- .alert-icon-title-container h1 {
-  font-size: 40px;
-  text-align: center;
- }
-
- .incident-details-container {
-  padding: 20px;
- }
-
- .incident-details-container p {
-  font-size: 16px;
- }
-
- .response-button {
-  font-size: 18px;
-  padding: 10px 30px;
+  width: 500px;
  }
 }
 
-/* --- MOBILE PHONES (max-width: 768px) --- */
-@media (max-width: 768px) {
- main {
-  margin: 80px auto;
-  padding: 0 1rem;
- }
-
+/* --- Tablets (max-width: 992px) --- */
+@media (max-width: 992px) {
  .profile-card {
-  max-width: 95%;
-  padding: 20px;
+  padding: 25px 30px;
+  max-width: 85vw;
  }
 
  .profile-card h2 {
-  font-size: 24px;
-  text-align: center;
+  font-size: 26px;
  }
 
  .info-row {
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.8rem;
+  gap: 0.5rem;
   margin: 25px 0;
  }
 
  .info-row label {
-  font-size: 16px;
   text-align: left;
+  font-size: 17px;
+ }
+
+ .profile-card input {
+  width: 100%;
  }
 
  .input-with-button {
-  flex-direction: column;
-  align-items: stretch;
-  gap: 10px;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
  }
 
  .change-btn {
-  width: 100%;
-  margin-left: 0;
-  padding: 10px;
+  margin-left: 10px;
+  font-size: 15px;
+  padding: 6px 14px;
+ }
+
+ .modal {
+  width: 400px;
+  height: auto;
+ }
+
+ .modal input {
+  font-size: 15px;
+ }
+
+ .button-options {
+  margin: 1.5rem 0 0 0;
+ }
+}
+
+/* --- Mobile Devices (max-width: 768px) --- */
+@media (max-width: 768px) {
+ main {
+  margin: 100px auto;
+  padding: 0 1.5rem;
+ }
+
+ .profile-card {
+  padding: 20px;
+  max-width: 95vw;
+ }
+
+ .profile-card h2 {
+  font-size: 22px;
+  text-align: center;
+ }
+
+ .info-row {
+  margin: 20px 0;
+ }
+
+ .info-row label {
+  font-size: 16px;
+ }
+
+ .profile-card input {
+  font-size: 15px;
+ }
+
+ .change-btn {
+  padding: 5px 12px;
+  font-size: 14px;
  }
 
  .modal {
@@ -426,25 +417,74 @@ main {
  .button-options {
   flex-direction: column;
   align-items: stretch;
-  margin: 1rem 0;
   gap: 10px;
  }
 
  .btn-cancel,
  .btn-save-changes {
   width: 100%;
+  font-size: 14px;
+  padding: 10px;
  }
 
- /* Emergency modal adjustments */
+ /* Emergency alert modal */
  .emergency-alert-container {
-  width: 95%;
+  width: 90%;
   height: auto;
-  box-shadow: 5px 5px 10px rgba(255, 0, 0, 0.3);
  }
 
- .alert-icon-title-container {
-  height: auto;
+ .alert-icon-imagesize {
+  width: 150px;
+  height: 150px;
+ }
+
+ .alert-icon-title-container h1 {
+  font-size: 28px;
+  text-align: center;
+ }
+
+ .incident-details-container {
   padding: 20px;
+ }
+
+ .incident-details-container p {
+  font-size: 16px;
+ }
+
+ .response-button {
+  width: 100%;
+  font-size: 18px;
+  padding: 10px 0;
+ }
+}
+
+/* --- Small Mobile (max-width: 480px) --- */
+@media (max-width: 480px) {
+ main {
+  margin: 80px auto;
+  padding: 0 1rem;
+ }
+
+ .profile-card {
+  padding: 15px;
+ }
+
+ .profile-card h2 {
+  font-size: 20px;
+ }
+
+ .info-row label {
+  font-size: 15px;
+ }
+
+ .change-btn {
+  font-size: 13px;
+  padding: 5px 10px;
+ }
+
+ .modal {
+  width: 95%;
+  padding: 15px;
  }
 
  .alert-icon-imagesize {
@@ -453,7 +493,7 @@ main {
  }
 
  .alert-icon-title-container h1 {
-  font-size: 28px;
+  font-size: 22px;
  }
 
  .incident-details-container h2 {
@@ -462,84 +502,9 @@ main {
 
  .incident-details-container p {
   font-size: 15px;
-  line-height: 1.4;
  }
 
  .response-button {
   font-size: 16px;
-  padding: 8px 20px;
-  width: 80%;
-  margin-bottom: 20px;
- }
-}
-
-/* --- SMALL MOBILE (max-width: 480px) --- */
-@media (max-width: 480px) {
- .profile-card {
-  padding: 15px;
-  border-radius: 12px;
- }
-
- .profile-card h2 {
-  font-size: 20px;
- }
-
- .profile-card label {
-  font-size: 14px;
- }
-
- .profile-card input {
-  font-size: 14px;
-  padding: 8px;
- }
-
- .change-btn {
-  font-size: 14px;
-  padding: 8px;
- }
-
- .modal {
-  width: 95%;
-  height: auto;
-  padding: 15px;
- }
-
- .button-options {
-  margin: 10px 0;
- }
-
- .btn-cancel,
- .btn-save-changes {
-  font-size: 14px;
-  padding: 8px;
- }
-
- /* Emergency modal */
- .emergency-alert-container {
-  width: 95%;
-  height: auto;
-  padding-bottom: 10px;
- }
-
- .alert-icon-imagesize {
-  width: 100px;
-  height: 100px;
- }
-
- .alert-icon-title-container h1 {
-  font-size: 22px;
- }
-
- .incident-details-container h2 {
-  font-size: 16px;
- }
-
- .incident-details-container p {
-  font-size: 14px;
- }
-
- .response-button {
-  font-size: 14px;
-  padding: 8px;
  }
 }
