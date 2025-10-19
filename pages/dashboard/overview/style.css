@@ -112,3 +112,150 @@ main {
   transform: translateY(-4px);
   box-shadow: 4px 6px 0 #b32424;
 }
+
+/* RESPONSIVENESS */
+/* 💻 Medium devices: tablets, small laptops (max 1024px) */
+@media (max-width: 1024px) {
+ #map {
+  height: 85vh;
+ }
+
+ .emergency-alert-container {
+  width: 550px;
+  height: 520px;
+ }
+
+ .alert-icon-imagesize {
+  width: 150px;
+  height: 150px;
+ }
+
+ .alert-icon-title-container h1 {
+  font-size: 38px;
+ }
+
+ .incident-details-container {
+  padding: 25px 30px;
+ }
+
+ .incident-details-container p {
+  font-size: 16px;
+ }
+
+ .response-button {
+  font-size: 18px;
+  padding: 10px 35px;
+ }
+}
+
+/* 📱 Mobile landscape (max 768px) */
+@media (max-width: 768px) {
+ #map {
+  height: 80vh;
+ }
+
+ .emergency-alert-container {
+  width: 450px;
+  height: 480px;
+ }
+
+ .alert-icon-imagesize {
+  width: 130px;
+  height: 130px;
+ }
+
+ .alert-icon-title-container h1 {
+  font-size: 30px;
+ }
+
+ .incident-details-container {
+  padding: 20px;
+ }
+
+ .incident-details-container h2 {
+  font-size: 20px;
+ }
+
+ .incident-details-container p {
+  font-size: 15px;
+ }
+
+ .response-button {
+  width: 80%;
+  font-size: 16px;
+ }
+
+ .alert-icon-title-container button {
+  font-size: 14px;
+ }
+}
+
+/* 📱 Mobile portrait (max 480px) */
+@media (max-width: 480px) {
+ #map {
+  height: 75vh;
+ }
+
+ .emergency-alert-container {
+  width: 90%;
+  height: auto;
+  border-radius: 15px;
+ }
+
+ .alert-icon-title-container {
+  height: auto;
+  padding: 20px 10px;
+ }
+
+ .alert-icon-imagesize {
+  width: 100px;
+  height: 100px;
+  margin-bottom: -10px;
+ }
+
+ .alert-icon-title-container h1 {
+  font-size: 24px;
+ }
+
+ .incident-details-container {
+  padding: 20px 15px;
+ }
+
+ .incident-details-container h2 {
+  font-size: 18px;
+ }
+
+ .incident-details-container p {
+  font-size: 14px;
+ }
+
+ .response-button {
+  width: 90%;
+  font-size: 15px;
+  padding: 10px;
+ }
+
+ .alert-icon-title-container button {
+  font-size: 13px;
+  padding: 5px 8px;
+ }
+}
+
+/* 📱 Very small phones (max 360px) */
+@media (max-width: 360px) {
+ #map {
+  height: 70vh;
+ }
+
+ .alert-icon-title-container h1 {
+  font-size: 20px;
+ }
+
+ .incident-details-container p {
+  font-size: 13px;
+ }
+
+ .response-button {
+  font-size: 14px;
+ }
+}
