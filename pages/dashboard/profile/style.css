@@ -281,3 +281,265 @@ main {
   transform: translateY(-4px);
   box-shadow: 4px 6px 0 #b32424;
 }
+
+/* RESPONSIVENESS */
+/* --- TABLETS (max-width: 1024px) --- */
+@media (max-width: 1024px) {
+ main {
+  margin: 100px auto;
+  padding: 0 2rem;
+ }
+
+ .profile-card {
+  padding: 25px 40px;
+  max-width: 80vw;
+ }
+
+ .profile-card h2 {
+  font-size: 28px;
+ }
+
+ .info-row {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+ }
+
+ .info-row label {
+  text-align: left;
+  font-size: 18px;
+  flex: none;
+ }
+
+ .profile-card input {
+  width: 100%;
+  max-width: 100%;
+ }
+
+ .change-btn {
+  padding: 8px 16px;
+  font-size: 16px;
+ }
+
+ .modal {
+  width: 80%;
+  height: auto;
+  padding: 20px;
+ }
+
+ .button-options {
+  flex-direction: column;
+  gap: 10px;
+  margin: 1rem 0;
+ }
+
+ .btn-cancel,
+ .btn-save-changes {
+  width: 100%;
+ }
+
+ /* Emergency alert modal */
+ .emergency-alert-container {
+  width: 90%;
+  height: auto;
+ }
+
+ .alert-icon-imagesize {
+  width: 150px;
+  height: 150px;
+ }
+
+ .alert-icon-title-container h1 {
+  font-size: 40px;
+  text-align: center;
+ }
+
+ .incident-details-container {
+  padding: 20px;
+ }
+
+ .incident-details-container p {
+  font-size: 16px;
+ }
+
+ .response-button {
+  font-size: 18px;
+  padding: 10px 30px;
+ }
+}
+
+/* --- MOBILE PHONES (max-width: 768px) --- */
+@media (max-width: 768px) {
+ main {
+  margin: 80px auto;
+  padding: 0 1rem;
+ }
+
+ .profile-card {
+  max-width: 95%;
+  padding: 20px;
+ }
+
+ .profile-card h2 {
+  font-size: 24px;
+  text-align: center;
+ }
+
+ .info-row {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin: 25px 0;
+ }
+
+ .info-row label {
+  font-size: 16px;
+  text-align: left;
+ }
+
+ .input-with-button {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+ }
+
+ .change-btn {
+  width: 100%;
+  margin-left: 0;
+  padding: 10px;
+ }
+
+ .modal {
+  width: 90%;
+  height: auto;
+  padding: 20px;
+ }
+
+ .modal label {
+  font-size: 15px;
+ }
+
+ .modal input {
+  font-size: 14px;
+ }
+
+ .button-options {
+  flex-direction: column;
+  align-items: stretch;
+  margin: 1rem 0;
+  gap: 10px;
+ }
+
+ .btn-cancel,
+ .btn-save-changes {
+  width: 100%;
+ }
+
+ /* Emergency modal adjustments */
+ .emergency-alert-container {
+  width: 95%;
+  height: auto;
+  box-shadow: 5px 5px 10px rgba(255, 0, 0, 0.3);
+ }
+
+ .alert-icon-title-container {
+  height: auto;
+  padding: 20px;
+ }
+
+ .alert-icon-imagesize {
+  width: 120px;
+  height: 120px;
+ }
+
+ .alert-icon-title-container h1 {
+  font-size: 28px;
+ }
+
+ .incident-details-container h2 {
+  font-size: 18px;
+ }
+
+ .incident-details-container p {
+  font-size: 15px;
+  line-height: 1.4;
+ }
+
+ .response-button {
+  font-size: 16px;
+  padding: 8px 20px;
+  width: 80%;
+  margin-bottom: 20px;
+ }
+}
+
+/* --- SMALL MOBILE (max-width: 480px) --- */
+@media (max-width: 480px) {
+ .profile-card {
+  padding: 15px;
+  border-radius: 12px;
+ }
+
+ .profile-card h2 {
+  font-size: 20px;
+ }
+
+ .profile-card label {
+  font-size: 14px;
+ }
+
+ .profile-card input {
+  font-size: 14px;
+  padding: 8px;
+ }
+
+ .change-btn {
+  font-size: 14px;
+  padding: 8px;
+ }
+
+ .modal {
+  width: 95%;
+  height: auto;
+  padding: 15px;
+ }
+
+ .button-options {
+  margin: 10px 0;
+ }
+
+ .btn-cancel,
+ .btn-save-changes {
+  font-size: 14px;
+  padding: 8px;
+ }
+
+ /* Emergency modal */
+ .emergency-alert-container {
+  width: 95%;
+  height: auto;
+  padding-bottom: 10px;
+ }
+
+ .alert-icon-imagesize {
+  width: 100px;
+  height: 100px;
+ }
+
+ .alert-icon-title-container h1 {
+  font-size: 22px;
+ }
+
+ .incident-details-container h2 {
+  font-size: 16px;
+ }
+
+ .incident-details-container p {
+  font-size: 14px;
+ }
+
+ .response-button {
+  font-size: 14px;
+  padding: 8px;
+ }
+}
