@@ -690,3 +690,247 @@ main{
 .password-container .toggle-password:hover {
   color: #000;
 }
+
+/* RESPONSIVENESS */
+/* --- LARGE LAPTOPS (max-width: 1440px) --- */
+@media (max-width: 1440px) {
+ .settings-container {
+  padding: 25px 40px;
+  max-width: 80vw;
+ }
+
+ .user-account-row input,
+ .ap-hotspot-row input,
+ .select-field-style {
+  width: 400px;
+ }
+
+ .btn-wifi-list,
+ .btn-reset,
+ .btn-restart,
+ .change-btn {
+  font-size: 18px;
+  padding: 8px 16px;
+ }
+}
+
+/* --- TABLETS (max-width: 1024px) --- */
+@media (max-width: 1024px) {
+ main {
+  margin: 60px auto;
+  padding: 0 2rem;
+ }
+
+ .settings-container {
+  padding: 25px;
+  max-width: 95vw;
+ }
+
+ /* Stack major sections */
+ .ap-hotspot-wifi-section {
+  flex-direction: column;
+  gap: 20px;
+ }
+
+ .ap-wifi-list-section {
+  margin-left: 0;
+ }
+
+ /* Adjust rows */
+ .user-account-row,
+ .snooze-settings-row,
+ .ap-hotspot-row {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 0;
+  gap: 10px;
+ }
+
+ .ssid,
+ .ap-hotspot-checkbox,
+ .wifi-function-button {
+  margin-left: 0;
+ }
+
+ .user-account-row input,
+ .ap-hotspot-row input,
+ .select-field-style {
+  width: 100%;
+  font-size: 18px;
+ }
+
+ .user-account-section h2,
+ .snooze-settings-section h2,
+ .ap-hotspot-section h2,
+ .ap-wifi-list-section h2 {
+  font-size: 26px;
+ }
+
+ .section-title,
+ .user-account-row label,
+ .ap-hotspot-row label {
+  font-size: 20px;
+ }
+
+ .btn-wifi-list,
+ .change-btn,
+ .btn-restart,
+ .btn-reset {
+  align-self: flex-start;
+  font-size: 18px;
+  padding: 8px 18px;
+ }
+
+ .modal,
+ .modaltypePassword,
+ .modalBoxWifiList,
+ .emergency-alert-container {
+  width: 90%;
+  height: auto;
+  max-height: 90vh;
+  padding: 20px;
+ }
+}
+
+/* --- LARGE PHONES (max-width: 768px) --- */
+@media (max-width: 768px) {
+ .title-settings {
+  font-size: 24px;
+ }
+
+ .device-icon {
+  width: 35px;
+ }
+
+ .settings-container {
+  padding: 20px;
+  border-radius: 15px;
+ }
+
+ .user-account-section h2,
+ .snooze-settings-section h2,
+ .ap-hotspot-section h2,
+ .ap-wifi-list-section h2 {
+  font-size: 22px;
+ }
+
+ .user-account-row input,
+ .ap-hotspot-row input,
+ .select-field-style {
+  font-size: 16px;
+  height: 38px;
+ }
+
+ .change-btn,
+ .btn-reset,
+ .btn-restart,
+ .btn-wifi-list {
+  font-size: 16px;
+  padding: 8px 14px;
+  border-radius: 10px;
+ }
+
+ .wifi-function-button {
+  justify-content: flex-start;
+  width: 100%;
+ }
+
+ /* Modals adjust */
+ .modal,
+ .modaltypePassword,
+ .modalBoxWifiList,
+ .emergency-alert-container {
+  width: 95%;
+  height: auto;
+ }
+
+ .alert-icon-title-container h1 {
+  font-size: 30px;
+ }
+
+ .incident-details-container h2 {
+  font-size: 18px;
+ }
+
+ .incident-details-container p {
+  font-size: 16px;
+ }
+
+ .response-button {
+  font-size: 18px;
+  padding: 10px 30px;
+ }
+}
+
+/* --- SMALL PHONES (max-width: 480px) --- */
+@media (max-width: 480px) {
+ main {
+  margin: 40px auto;
+  padding: 0 1rem;
+ }
+
+ .settings-container {
+  padding: 15px;
+  border-radius: 10px;
+ }
+
+ .title-settings {
+  font-size: 20px;
+ }
+
+ .user-account-row input,
+ .ap-hotspot-row input,
+ .select-field-style {
+  width: 100%;
+  height: 35px;
+  font-size: 14px;
+ }
+
+ .change-btn,
+ .btn-reset,
+ .btn-restart,
+ .btn-wifi-list {
+  font-size: 14px;
+  padding: 6px 12px;
+ }
+
+ .ap-hotspot-wifi-section {
+  flex-direction: column;
+ }
+
+ .ap-wifi-list-section {
+  margin-left: 0;
+ }
+
+ .wifi-function-button {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+ }
+
+ .modalBoxWifiList-container {
+  width: 100%;
+  height: 80vh;
+  transform: none;
+ }
+
+ .alert-icon-imagesize {
+  width: 120px;
+  height: 120px;
+ }
+
+ .alert-icon-title-container h1 {
+  font-size: 24px;
+  text-align: center;
+ }
+
+ .incident-details-container {
+  padding: 15px;
+ }
+
+ .response-button {
+  width: 100%;
+  font-size: 16px;
+  padding: 8px 0;
+ }
+}
