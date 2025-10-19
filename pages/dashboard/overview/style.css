@@ -114,62 +114,66 @@ main {
 }
 
 /* RESPONSIVENESS */
-/* 💻 Medium devices: tablets, small laptops (max 1024px) */
-@media (max-width: 1024px) {
+/* --- LARGE TABLETS & SMALL LAPTOPS (max-width: 1200px) --- */
+@media (max-width: 1200px) {
  #map {
-  height: 85vh;
+  height: 90vh;
  }
 
  .emergency-alert-container {
-  width: 550px;
+  width: 600px;
   height: 520px;
  }
 
- .alert-icon-imagesize {
-  width: 150px;
-  height: 150px;
+ .alert-icon-title-container h1 {
+  font-size: 42px;
  }
 
- .alert-icon-title-container h1 {
-  font-size: 38px;
+ .alert-icon-imagesize {
+  width: 160px;
+  height: 160px;
+  margin-bottom: -20px;
  }
 
  .incident-details-container {
-  padding: 25px 30px;
+  padding: 25px 35px;
  }
 
  .incident-details-container p {
   font-size: 16px;
  }
-
- .response-button {
-  font-size: 18px;
-  padding: 10px 35px;
- }
 }
 
-/* 📱 Mobile landscape (max 768px) */
-@media (max-width: 768px) {
+/* --- TABLETS (max-width: 992px) --- */
+@media (max-width: 992px) {
  #map {
-  height: 80vh;
+  height: 88vh;
  }
 
  .emergency-alert-container {
-  width: 450px;
-  height: 480px;
+  width: 80%;
+  height: auto;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding-bottom: 30px;
+ }
+
+ .alert-icon-title-container {
+  height: 45%;
  }
 
  .alert-icon-imagesize {
-  width: 130px;
-  height: 130px;
+  width: 140px;
+  height: 140px;
+  margin-bottom: -10px;
  }
 
  .alert-icon-title-container h1 {
-  font-size: 30px;
+  font-size: 36px;
  }
 
  .incident-details-container {
-  padding: 20px;
+  padding: 20px 30px;
  }
 
  .incident-details-container h2 {
@@ -181,25 +185,73 @@ main {
  }
 
  .response-button {
-  width: 80%;
-  font-size: 16px;
- }
-
- .alert-icon-title-container button {
-  font-size: 14px;
+  font-size: 18px;
+  padding: 10px 35px;
  }
 }
 
-/* 📱 Mobile portrait (max 480px) */
-@media (max-width: 480px) {
+/* --- MOBILE LANDSCAPE (max-width: 768px) --- */
+@media (max-width: 768px) {
  #map {
-  height: 75vh;
+  height: 86vh;
  }
 
  .emergency-alert-container {
   width: 90%;
   height: auto;
+  max-height: 90vh;
+  overflow-y: auto;
+ }
+
+ .alert-icon-title-container {
+  height: 40%;
+  padding: 15px;
+ }
+
+ .alert-icon-imagesize {
+  width: 120px;
+  height: 120px;
+ }
+
+ .alert-icon-title-container h1 {
+  font-size: 30px;
+  text-align: center;
+ }
+
+ .incident-details-container {
+  padding: 18px 25px;
+ }
+
+ .incident-details-container h2 {
+  font-size: 18px;
+ }
+
+ .incident-details-container p {
+  font-size: 14px;
+ }
+
+ .response-button {
+  font-size: 16px;
+  padding: 8px 28px;
+  margin-bottom: 10px;
+ }
+
+ .emergency-alert-overlay {
+  align-items: flex-start;
+  padding-top: 5vh;
+ }
+}
+
+/* --- SMALL MOBILE PHONES (max-width: 480px) --- */
+@media (max-width: 480px) {
+ #map {
+  height: 84vh;
+ }
+
+ .emergency-alert-container {
+  width: 95%;
   border-radius: 15px;
+  max-height: 90vh;
  }
 
  .alert-icon-title-container {
@@ -210,52 +262,51 @@ main {
  .alert-icon-imagesize {
   width: 100px;
   height: 100px;
-  margin-bottom: -10px;
+  margin-bottom: 5px;
  }
 
  .alert-icon-title-container h1 {
-  font-size: 24px;
+  font-size: 26px;
+  text-align: center;
  }
 
  .incident-details-container {
-  padding: 20px 15px;
+  padding: 15px 20px;
  }
 
  .incident-details-container h2 {
-  font-size: 18px;
+  font-size: 16px;
  }
 
  .incident-details-container p {
-  font-size: 14px;
+  font-size: 13px;
+  line-height: 1.4;
  }
 
  .response-button {
-  width: 90%;
+  width: 80%;
   font-size: 15px;
-  padding: 10px;
+  padding: 8px 0;
  }
 
- .alert-icon-title-container button {
-  font-size: 13px;
-  padding: 5px 8px;
+ .emergency-alert-overlay {
+  align-items: flex-start;
+  padding-top: 8vh;
  }
 }
 
-/* 📱 Very small phones (max 360px) */
+/* --- VERY SMALL DEVICES (max-width: 360px) --- */
 @media (max-width: 360px) {
- #map {
-  height: 70vh;
- }
-
  .alert-icon-title-container h1 {
-  font-size: 20px;
+  font-size: 22px;
  }
 
  .incident-details-container p {
-  font-size: 13px;
+  font-size: 12px;
  }
 
  .response-button {
   font-size: 14px;
+  width: 85%;
  }
 }
