@@ -130,7 +130,10 @@
 
             <div class="ap-wifi-list-section">
               <h2>WI-FI</h2>
-              <button onclick="btnWifiList()" class="btn-wifi-list"><img src="../../../assets/images/wifi-list-settings.png" alt="icon" class="wifi-list-icon">VIEW WIFI LIST</button>
+              <button id="wifi_button" class="btn-wifi-list">
+                <img src="../../../assets/images/wifi-list-settings.png" alt="icon" class="wifi-list-icon">
+                VIEW WIFI LIST
+              </button>
             </div>
 
           </div>
@@ -191,36 +194,45 @@
         </div>
       </div>
 
-      <div class="modalBoxWifiList" id="btnWifiListModal">
-        <button onclick="closeModal()" class="close-button-red-icon"><img class="x-icon-button" src="../../../assets/images/close-button.png" alt="icon"></button>
-        <div class="modalBoxWifiList-container">
-          <ul class="wifi-list">
-            
-            <!-- CONNECTED WIFI -->
-            <li class="wifi-item-c" id="" name="">
-                <img class="wifi-list-locked-icon" src="../../../assets/images/wifi-lock.png" alt="wifi icon" class="wifi-icon">
+      <!-- Wi-Fi List Modal -->
+      <div class="overlay" id="wifi_list_overlay">
+        <div class="modalBoxWifiList" id="wifi_list_modal">
+          <button id="wifi_list_close_button" class="close-button-red-icon">
+            <img class="x-icon-button" src="../../../assets/images/close-button.png" alt="close icon">
+          </button>
 
-                <div class="wifi-details-c" id="" name="">
+          <div class="modalBoxWifiList-container wifi-list-container">
+            <ul class="wifi-list">
+
+              <!-- CONNECTED NETWORK -->
+              <li class="wifi-item wifi-connected" data-connected="true">
+                <img class="wifi-list-locked-icon" src="../../../assets/images/wifi-lock.png" alt="wifi icon">
+                <div class="wifi-details">
                   <h1>ConnectPaMahihirap5G</h1>
                   <p>Connected, Secured</p>
                 </div>
-
                 <button class="btn-disconnect">DISCONNECT</button>
-            </li>
+              </li>
 
-            <!-- NOT CONNECTED WI-FI -->
-            <li class="wifi-item-nc" id="" name="">
-                <img class="wifi-list-locked-icon" src="../../../assets/images/wifi-lock.png" alt="wifi icon" class="wifi-icon">
-
-                <div class="wifi-details-nc" id="" name="">
+              <!-- AVAILABLE NETWORKS -->
+              <li class="wifi-item">
+                <img class="wifi-list-locked-icon" src="../../../assets/images/wifi-lock.png" alt="wifi icon">
+                <div class="wifi-details">
                   <h1>ConnectPaMahihirap5G</h1>
                 </div>
-            </li>
+              </li>
 
-          </ul>
+              <li class="wifi-item">
+                <img class="wifi-list-locked-icon" src="../../../assets/images/wifi-lock.png" alt="wifi icon">
+                <div class="wifi-details">
+                  <h1>PublicHotspot</h1>
+                </div>
+              </li>
+
+            </ul>
+          </div>
         </div>
       </div>
-
 
       <!-- EMERGENCY ALERT MESSAGE MODAL BOX -->
       <div class="emergency-alert-overlay" id="emergency-alert-overlay">
@@ -256,5 +268,6 @@
   <script src="../../../assets/js/header-dashboard-script.js"></script>
   <script src="../logout-script.js"></script>
   <script src="./script.js"></script>
+  <script src="../../../assets/js/wifi-popup-and-button-script.js"></script>
 </body>
 </html>
