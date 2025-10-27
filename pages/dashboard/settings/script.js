@@ -7,6 +7,10 @@ const password = document.getElementById("password");
 const togglePassword2 = document.getElementById("togglePassword2");
 const showtypePassword = document.getElementById("showtypePassword");
 
+const togglePassword3 = document.getElementById("togglePassword3");
+const user_password = document.getElementById("user_password");
+const change_password = document.getElementById("change_password");
+
 // togglePassword.addEventListener("click", () => {
 //   const isPassword = password.type === "password";
 //   password.type = isPassword ? "text" : "password";
@@ -26,6 +30,7 @@ function toggleVisibility(toggleIcon, inputField) {
 
 togglePassword.addEventListener("click", () => toggleVisibility(togglePassword, password));
 togglePassword2.addEventListener("click", () => toggleVisibility(togglePassword2, showtypePassword));
+togglePassword3.addEventListener("click", () => toggleVisibility(togglePassword3, user_password));
 
 //CONDITIONAL BUTTON FUNCTION RESTART AND RESET
 function btnRestart(){
@@ -48,7 +53,6 @@ function closeModal(){
     document.getElementById("buttonRestart").style.display = "none";
     document.getElementById("buttonReset").style.display = "none";
     document.getElementById("typePassword").style.display = "none";
-    document.getElementById("btnWifiListModal").style.display = "none";
     document.getElementById("overlay").style.display = "none";
 }
 
@@ -57,6 +61,56 @@ function closeModalFireEmergency(){
   document.getElementById("modal").style.display = "none";
   document.getElementById("emergency-alert-overlay").style.display = "none";
 }
+
+//Change User Inputs
+const change_username = document.getElementById("change_username");
+const usernameInput = document.getElementById("username");
+
+change_username.addEventListener("click", () => {
+  const new_username = prompt("Enter your new username: ", usernameInput.value);
+
+  if(new_username === null){
+    return;
+  }
+
+  const trimmedUsername = new_username.trim();
+
+  if (trimmedUsername === "") {
+    alert("Username cannot be empty!");
+    return;
+  }
+
+  usernameInput.value = trimmedUsername;
+  alert("Username changed successfully to: " + trimmedUsername);
+});
+
+change_password.addEventListener("click", () => {
+  const new_password = prompt("Enter your new password: ");
+
+  if(new_password === null){
+    return;
+  }
+
+  const trimmedPassword = new_password.trim();
+
+  if (trimmedPassword === ""){
+    alert("Password cannot be empty!");
+  }
+
+  const confirm_password = prompt("Confirm your new password: ");
+
+  if(confirm_password === null){
+    return;
+  }
+
+  if(trimmedPassword !== confirm_password.trim()){
+    alert("Password does not match.");
+    return;
+  }
+
+  user_password.value = trimmedPassword;
+  alert("Password changed successfully!");
+});
 
 // --- Wi-Fi Modal Logic ---
 const wifi_button = document.getElementById("wifi_button");

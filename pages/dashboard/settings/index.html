@@ -53,14 +53,18 @@
           <h2>USER ACCOUNT</h2>
             <div class="user-account-row">
               <label for="username">USERNAME</label>
-              <input type="text">
-              <button class="change-btn">CHANGE</button>
+              <!-- VALUE SAMPLE ONLY -->
+              <input type="text" id="username" value="CurrentUser123" readonly> 
+              <button class="change-btn" id="change_username">CHANGE</button>
             </div>
 
             <div class="user-account-row">
               <label for="password">PASSWORD</label>
-              <input type="password">
-              <button class="change-btn">CHANGE</button>
+                    <div class="password-container">
+                        <input type="password" value="12345678" id="user_password" readonly>
+                        <i class="fa-solid fa-eye-slash toggle-password" id="togglePassword3"></i>
+                    </div>
+              <button class="change-btn" id="change_password">CHANGE</button>
             </div>
         </div>
 
